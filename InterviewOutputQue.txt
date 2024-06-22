@@ -1,0 +1,485 @@
+1. console.log(1);
+   setTimeout(()=>{console.log(2)},1000);
+   setTimeout(()=>{console.log(3)},0);
+   console.log(4);
+   OUTPUT=>1 4 3 2
+
+2.setTimeout(()=>{
+    console.log(i);
+    var i=10;
+  }, 1000);
+  OUTPUT=> undefined
+
+3.var i=10;
+  setTimeout(()=>{
+  console.log(i);
+    
+  }, 1000);
+  OUTPUT=> 10
+
+4. let count=0;
+   function printCount(){
+    if(count==0){
+        let count=3;
+        console.log("count1",count);
+    }
+    console.log("count2",count);
+    }
+    printCount();
+    OUTPUT=>count1 3, count2 0  here use let scope
+
+5.console.log(2+'2'); //OUTPUT=>22
+  console.log(2-'2'); //OUTPUT=>0
+  console.log('2'-2); //OUTPUT=>0
+
+6.Map vs forEach difference
+
+  const arrNum=[1,2,3,4,5];
+  const mapMethod=arrNum.map((res)=>{
+    return res+3
+  })
+  const foreachMethod=arrNum.forEach((res,i)=>{
+    arrNum[i]=res+7;
+  })
+  console.log(mapMethod,arrNum);
+
+  OUTPUT=>[ 4, 5, 6, 7, 8 ] [ 8, 9, 10, 11, 12 ]
+
+7. const name="xyzew"
+   age=30;
+   console.log(delete name);
+   console.log(delete age);
+   OUTPUT=> false true
+
+8. console.log(3+true); //OUTPUT=>4--->true=1,false=0
+
+9.function sayHi(){
+    console.log(name);
+    console.log(age);
+    var name='sona';
+    let age=21;
+}
+sayHi();
+OUTPUT=>undefined and referenceError ----age not defined used with let scope
+
+10. +true;
+    !'zena';
+    OUTPUT=> 1 and false
+
+11. let a=3;
+    let b=new Number(3);
+    let c=3;
+    console.log(a==b);
+    console.log(a===b);
+    console.log(b===c);
+OUTPUT=> true false false
+
+12. for(var i=0; i<3;i++){
+    setTimeout(()=> console.log(i),1);
+    }
+    OUTPUT=> 3 3 3 -----global scope i=3 so thats why ans is 3
+
+13. for(let i=0; i<3;i++){
+    setTimeout(()=> console.log(i),1);
+    }
+    OUTPUT=> 0 1 2 -----let dont have global scope its only block scope
+
+14. console.log(+type);         ----o/p=> 1 
+----//when ever we areputting + symbole befor any string and boolean value it will always keep a numeric value
+    console.warn(typeof +true);-----o/p=> number
+
+15. console.log(!"soha");         ----o/p=> false
+----//nagetion means opposite value then its false
+    console.warn(typeof ("soha"));-----o/p=> string
+    console.log(!!"soha");        -----o/p=> true
+
+16. let data = "size";
+    const bird ={
+        size: "small",
+    } ;
+    console.log(bird[data]);   -----O/P=>small --obj pass key
+    console.log(bird["size"]); -----O/P=>small --obj pass string value as key
+    console.log(bird.size);    -----O/P=>small --obj pass property
+    console.log(bird.data);    -----O/P=>undefined --here we use variable name withot braket so thats why not working
+
+17. let c={name:"peter"}; 
+    let d;
+    d=c;
+    c.name="anil;
+    console.log(d.name);
+   O/P=>anil
+
+18. var x;
+    var x=10;
+    console.log(x);
+  O/P=> 10
+
+19. let a=3;
+    let b= new Number(3);   ----//datatype is object so thats why false
+    console.loh(a==b);
+    console.log(a===b);
+  O/P=>true false
+
+20. let name;    ---//not assign any value
+    nmae ={};
+    console.log(name);
+   O/P=>undefined
+
+21. function fruit(){
+    console.log("woof!");
+    }
+    fruit.name="apple";
+    console.log(fruit());
+   O/P=>woof!
+
+22. function sum(a,b){
+    return a+b;
+    }
+   console.log(sum(1,"2"));
+   O/P=>12
+
+23. let number =0;
+    console.log(number++);   //return 0 then increment
+    console.log(++number);   //1 add increment so value is 2
+    console.log(number);    //valueis 2
+    O/P=>0 2 2
+
+24. function getAge(...args){
+    console.log(typeof args);
+   }
+   getAge(21);
+   O/P=>{21} and typeof=object
+
+25. function getAge(){
+    'use strict';
+    age=21;         ----//not define scope
+    console.log(age);
+    }
+   getAge();
+   O/P=>Error
+
+26. const sum = eval('10*10+5);
+    console.log(sum);
+    O/P=>105
+
+27. /How long is cool_secret accessible?
+    sessionStorage.setItem.setItem('cool_secret', 123);
+    o/p=>1month
+
+28. const obj ={1:"a", 2:"b", 3:"c"};
+    console.log(obj.hasOwnProperty("1));
+    console.log(obj.hasOwnProperty(1));
+    O/P=> true true
+
+29. for(let i=1;i<5;i++){
+    if(i===3)continue;
+    console.log(i);
+    }
+    O/P=> 1 2 4
+
+30. const fpp = () => console.log('first');
+    const bar = () => setTimeout(()=> console.log('second));
+    const baz = () => console.log('third');
+    bar();
+    fpp();
+    baz();
+    O/P=>first third seconfd
+
+31. const personn ={ name:'Lydia'};
+    function sayHi(age){
+        return `${this.name} is ${age}`;
+    } 
+    console.log(sayHi.call(person, 21));
+    console.log(sayHi.bind(person, 21));  -----//we need to call again console.log(sayHi.bind(person, 21())); then o/p=>Lydiais 21 
+    O/P=>1.Lydiais 21
+         2.f sayHi(age){
+            return `${this.name} is ${age}`;
+         }
+
+32. function sayHi(){
+    return (()=>0)();   ---//use return arrow fun return 0 then we call again so retun value is 0
+   }
+   console.log(typeof sayHi());
+   O/P=:>number
+
+33. function sayHi(){
+    return ()=>0;   ---//return a arrow fun
+   }
+   console.log(typeof sayHi());
+   O/P=:>function
+
+34. console.log(typeof typeof 1);  ---//typeof 1 is number but typeof typeof 1 is string
+    O/P=> string
+
+35. console.log(2+true);          -----O/P=>3
+
+36. console.log(1+"2"+"2");      ------O/P=>122
+
+37. console.log(null==undefined); -----O/P=>true
+
+38. console.log(NaN===NaN);      ------O/P=>false
+
+39. console.log('5'- -'3');      -------O/p=>8
+
+40. console.log(typeof NaN); ----------O/P=>number
+
+41. console.log((1 && 2) || (0 || 3));-------O/P=> 2
+
+42. console.log(null && umdefined); ---------O/P=>null
+
+43. console.log(0 || 1 && 2|| 3)-------------O/P=> 2
+
+44. console.log(null || 2 && 3|| 4);---------O/P=>3
+
+45. console.log(8 + '5'); ----------O/P=> 85
+
+46. console.log('5' + 8); ----------O/P=> 58
+
+47. console.log(8 - '5'); ----------O/P=> 3
+
+48. console.log('5' - 8); ----------O/P=> -3
+
+49. console.log('1' - - '1'); ------O/P=> 2
+
+50. console.log('1' + + '1'); ------O/P=> 11
+
+51. console.log('1' -+ '1'); -------O/P=> 0
+
+52. console.log('1' +-'1'); ---------O/P=> 1-1
+ 
+53. console.log("9" > "11"); --------O/P=>true
+
+54. console.log("9" > 11); ----------O/P=>false
+
+55. console.log("" > -1); -----------O/P=>true
+
+56. console.log("Rowdy" > 1); -------O/P=>false
+
+57. const number = [1, 2, 3];
+    number[9]= 11;
+    console.log(number);
+    O/P=> [1,2,3,empty*6,11]
+
+58. const number = [1, 2, 3];
+    number[3]= number;
+    console.log(number);
+    O/P=> [1,2,3,Array(4)]
+
+59. console.log(!!null);  -----O/P=>false
+    console.log(!!"");    -----O/P=>false
+    console.log(!!1);     -----O/P=>true
+
+60. console.log(setInterval(() => console.log('Hi'), 1000))
+    console.log(setInterval(() => console.log('Hi'), 1000))
+    console.log(setInterval(() => console.log('Hi'), 1000))
+    O/P=>1 2 3 Hi Hi .....
+
+61. console.log([..."anil"]); -------O/P=>["a", "n", "i", "l"]
+
+62. let data =3+4+'5';
+    console.log(data);
+    O/P=>75
+
+63. let data =3+4+'5';
+    console.log(typeof);
+    O/P=>string
+
+64. console.log(typeof 3+4+'5');-----O/P=>number45
+
+65. console.log(typeof 3+4++'5');-----O/P=>number
+
+66. console.log(typeof []); ----------O/P=>object
+
+67. console.log([]==[]); -------------O/P=>false
+
+68. let data = [1,2,3].map(num => {
+    if(typeof num === 'number') return;
+    return num*2;
+    });
+    console.log(data);
+    O/P=>[undefined,undefined,undefined]
+
+69. function getInfo(member){
+    member.name = 'Anil';
+    }
+    const person ={name: 'sarah'};
+    getInfo(person);
+    console.log(person);
+    O/P=>{name:'Anil'}
+
+70. function car(){
+    this.make = 'tata';
+    return {make:'kia'};
+    }
+    const mycar = new car();
+    console.log(mycar.make);
+    O/P=>kia
+
+71. (()=>{
+    let x=(y=10);
+    })();
+    console.log(typeof x);
+    O/P=>undefined 
+
+72. (()=>{
+    let x=y=10;
+    })();
+    console.log(typeof y);
+    O/P=>number
+
+73. (()=>{
+    let x=10;
+    })();
+
+    (()=>{
+    let x=10;
+    })();
+    console.log(typeof x);
+    O/P=>nothing display
+
+74. (()=>{
+    let x=y=10;
+    })();
+
+    (()=>{
+    let x=y=20;
+    })();
+    console.log(typeof y);
+    O/P=>20
+
+75. console.log(!true - true); ----O/P=>-1
+
+76. console.log(true + +"10");-----O/P=>11
+
+77. console.log(['a'] + ['b']);----O/P=>ab 
+
+78. console.log([] + []); ---------O/P=>nothing display
+
+79. console.log(![]);    ----------O/P=>false
+
+80. console.log(![] + []); --------O/P=>false
+
+81. console.log(typeof NaN);-------O/P=>number
+
+82. function sum(num1, num2){
+    return arguments[0]+arguments[1];
+    }
+    sum(10,10);
+    O/P=>20
+
+83. function sum(num1, num2){
+    num1=100;
+    num2=200;
+    return arguments[0]+arguments[1];
+    }
+    sum(10,10);
+    O/P=>300
+
+84. function sum(num1, num2){
+    "use strict";
+    num1=100;
+    num2=200;
+    return arguments[0]+arguments[1];
+    }
+    sum(10,10);
+    O/P=>20
+
+85. const lib ={};
+    lib.name = obj;
+    obj = null;
+    console.log(lib.name);
+    O/P=>{lang: 'React'}
+
+86. function fetch(){
+    A=7;
+    console.log(A);
+   }
+   let A;
+   fetch();
+   O/P=>7
+
+87. var trees = ["pine","apple","oak","maple","cherry"];
+    delete trees[3];
+    console.log(trees.length);
+    O/P=>5
+
+88. let x =[];
+    console.log(Boolean(x));
+    O/P=>true
+
+89. const obj ={
+    prop: "Hello",
+    method: function(){
+        (()=> console.log(this.prop))();
+    }
+    };
+    obj.method();
+    O/P=>Hello
+
+90. console.log(Boolean("false")); -----O/P=>true
+    console.log(Boolean(false));   -----O/P=>false
+    console.log(!!"");             -----O/P=>false
+    console.log(!!1);              -----O/P=>true
+
+91. let x= "5";
+    let y= 2;
+    console.log(x+y);------O/P=>52
+    console.log(x-y);------O/P=>3
+
+92. var a = [1, 2, 3];
+    a[10] = 99;
+    console.log(a[6]);
+    O/P=>undefined
+
+93. var z = 1, y = z = typeof y;
+    console.log(y);
+    O/P=>undefined
+
+94. const result= false || 0|| "";
+    console.log(result);
+    O/P=>empty->nothing display
+
+95. const result= false || 0|| "xyz";
+    console.log(result);
+    O/P=>xyz
+
+96. const result= false || {}|| null;
+    console.log(result);
+    O/P=>{}
+
+97. let a=9;
+    let b=a++;
+    let c=++a + b++;
+    console.log(a,b,c);
+    O/P=>11 10 20
+
+98. console.log(5> '15' < 5);
+    console.log(7> '15' < 7);
+    console.log(7> '85' > 5);
+    O/P=>true true false
+
+99. console.log(promise.rsolve("done"));
+    O/P=>promise{<fulfiled>:'done'}
+
+100. var str="abc";
+     console.log(str[0]);------O/P=>a
+     str[0]="x";
+     console.log(str[0]);------O/P=>a 
+
+101. if({}) {
+    console.log("Hello world!!");
+    }else{
+    console.log("Bye");
+    }
+    O/P=>Hello world!!
+
+
+
+
+
+
+
+
+
+
+        
