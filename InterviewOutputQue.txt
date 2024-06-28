@@ -473,6 +473,13 @@ OUTPUT=> true false false
     }
     O/P=>Hello world!!
 
+102. var x=10;
+     debugger;
+     x=x+1;
+     debugger;
+     console.log(x);
+    OUTPUT=>11
+
 
 
 
