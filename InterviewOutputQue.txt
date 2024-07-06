@@ -480,6 +480,22 @@ OUTPUT=> true false false
      console.log(x);
     OUTPUT=>11
 
+103. var value=5;
+     console.log(value * value);
+     O/P=>25
+
+104. var value=5;
+     console.log(value ** value);
+     O/P=>3125
+
+105. var value=5;
+     console.log(value *** value);
+     O/P=>syntax error ---//alow only 2 * so thats why getting error
+
+
+
+
+
 
 
 
