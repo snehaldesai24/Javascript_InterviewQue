@@ -492,6 +492,17 @@ OUTPUT=> true false false
      console.log(value *** value);
      O/P=>syntax error ---//alow only 2 * so thats why getting error
 
+106. console.log(false == []); ------    O/P=>true------false=="" ->0==0 -> true
+     console.log(false == false);------  O/P=>true
+
+107. var length =20;
+     function count(){
+      console.log(this.length);
+    }
+   const data = [count, "A", 0];
+   data[0] ("Hey!");
+O/P=>3
+
 
 
 
