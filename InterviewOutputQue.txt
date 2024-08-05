@@ -501,8 +501,14 @@ OUTPUT=> true false false
     }
    const data = [count, "A", 0];
    data[0] ("Hey!");
-O/P=>3
+   O/P=>3
 
+108. console.log([] == 1); ----O/P=>false
+     console.log([] == 0); ----O/P=>true
+     console.log([] + 10); ----O/P=>10
+     console.log([] + {}); ----O/P=>[object object]
+     console.log([] === 1); ----O/P=>false
+     console.log([] === 0); ----O/P=>false
 
 
 
