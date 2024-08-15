@@ -2,8 +2,16 @@
 
 //factorial-product of all number from 1 to that number 
 //eg=5!=>1*2*3*4*5=120
+------------------1st Method--------------------------
+function factorial(n){
+    if(n === 0){
+        return 1;
+    }else return n* factorial(n-1);
+}
+console.log(factorial(5));
 
-
+//OUTPUT=>120
+-----------------------------------------2nd Method---------------------
 // take input from the user
 const number = parseInt(prompt('Enter a positive integer: '));
 
