@@ -21,3 +21,6 @@ const dummy = companies.map((company,index)=>{
 })
 console.log(dummy);
 
+//display name in caps
+const names =companies.map((camp)=>camp.name.toUpperCase());
+console.log(names);
