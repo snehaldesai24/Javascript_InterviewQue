@@ -510,7 +510,13 @@ OUTPUT=> true false false
      console.log([] === 1); ----O/P=>false
      console.log([] === 0); ----O/P=>false
 
-
+109. const a = {};
+     const b= {name: "b"};
+     const c = {name:"c"};
+     a[b]=111;
+     a[c]=222;
+     console.log(a[b]);
+     O?P=> 222
 
 
 
