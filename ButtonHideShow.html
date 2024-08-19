@@ -1,0 +1,42 @@
+<!-- Create one box height and width is 200 by 200 background color red and create another button in html and show me the hide show functionality on that button  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide/Show Box</title>
+
+    <style>
+        #redBox {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="redBox"></div>
+    <button id="toggleButton">Hide/Show Box</button>
+
+    <script src="script.js"></script>
+
+    <script>
+        const redBox = document.getElementById('redBox');
+        const toggleButton = document.getElementById('toggleButton');
+
+        toggleButton.addEventListener('click', () => {
+            if (redBox.style.display === 'none') {
+                redBox.style.display = 'block';
+            } else {
+                redBox.style.display = 'none';
+            }
+        });
+
+    </script>
+</body>
+
+</html>
