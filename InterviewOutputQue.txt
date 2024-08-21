@@ -516,7 +516,13 @@ OUTPUT=> true false false
      a[b]=111;
      a[c]=222;
      console.log(a[b]);
-     O?P=> 222
+     O/P=> 222
+
+110. console.log(true == '');  ----o/p=>false
+     console.log(+true);       ----o/p=>1
+     console.log(!"xyz");      ----o/p=>false
+     console.log('1' == 1);   ----o/p=>true
+
 
 
 
