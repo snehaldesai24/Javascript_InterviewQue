@@ -523,7 +523,12 @@ OUTPUT=> true false false
      console.log(!"xyz");      ----o/p=>false
      console.log('1' == 1);   ----o/p=>true
 
+111. console.log((true + "")[2]) ---o/p=>u
 
+112. const arr = [1,2,3];
+     arr[15]=100;
+     console.log(arr);
+    0/p=>[1,2,3,<12 empty item>, 100]
 
 
 
