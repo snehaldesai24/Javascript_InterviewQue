@@ -21,3 +21,14 @@ console.log(typeof function(){}); //"function"
 console.log("10" - - "5"); //15
 console.log(1+'2'+3); //"123"
 console.log(1||0 && 0||1); //1
+console.log(+type);         ----o/p=> 1 
+----//when ever we areputting + symbole befor any string and boolean value it will always keep a numeric value
+    console.warn(typeof +true);-----o/p=> number
+
+console.log(!"soha");         ----o/p=> false
+----//nagetion means opposite value then its false
+    console.warn(typeof ("soha"));-----o/p=> string
+    console.log(!!"soha");        -----o/p=> true
+
+ console.log((1 && 2) || (0 || 3));-------O/P=> 2
+
