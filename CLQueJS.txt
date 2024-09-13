@@ -32,3 +32,10 @@ console.log(!"soha");         ----o/p=> false
 
  console.log((1 && 2) || (0 || 3));-------O/P=> 2
 
+var a= "xyz";
+var a= "pqr";
+console.log(a);
+o/p=>pqr----//var allows redeclaration
+
+console.log([11, 2, 31] + [4, 5, 6]); -----//0/p=>11,2,314,5,6
+
