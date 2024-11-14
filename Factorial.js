@@ -12,6 +12,18 @@ console.log(factorial(5));
 
 //OUTPUT=>120
 -----------------------------------------2nd Method---------------------
+function factorial(num) {
+    if (num < 0) return 'Factorial not defined for negative numbers';
+    let result = 1;
+    for (let i = 1; i <= num; i++) {
+        result *= i;
+    }
+    return result;
+}
+console.log(factorial(5)); 
+
+// Output: 120
+-----------------------------------------3rd Method---------------------
 // take input from the user
 const number = parseInt(prompt('Enter a positive integer: '));
 
