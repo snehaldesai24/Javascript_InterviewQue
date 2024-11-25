@@ -39,3 +39,6 @@ o/p=>pqr----//var allows redeclaration
 
 console.log([11, 2, 31] + [4, 5, 6]); -----//0/p=>11,2,314,5,6
 
+console.log(2**3);   // Outputs: 8
+console.log(10**-1); // Outputs: 0.1
+
