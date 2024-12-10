@@ -41,4 +41,5 @@ console.log([11, 2, 31] + [4, 5, 6]); -----//0/p=>11,2,314,5,6
 
 console.log(2**3);   // Outputs: 8
 console.log(10**-1); // Outputs: 0.1
-
+console.log(1 + "2" + "3");  //Output=>123
+console.log(1 + 2 + "3");   //Output=>33
