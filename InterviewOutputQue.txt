@@ -535,7 +535,44 @@ OUTPUT=> true false false
      console.log(arr[index++]);
      console.log(arr[++index]);
     o/p=>2,6
-114. 
+
+114. const obj = {
+     a: 'one', // Fixed mismatched quotes
+     b: 'two',
+     a: 'three' // Last 'a' overwrites the first 'a'
+     };
+     console.log(obj); 
+   // Output: { a: 'three', b: 'two' }
+
+115. var num = 8;
+     var num = 10;
+     console.log(num); // Output: 10  =>The console.log(num) will display 10 because the second declaration overwrites the first one.
+
+116. function sum(a, b) {
+     return a + b;
+    }
+    console.log(sum(1, "2")); 
+    // Output: "12"
+
+117. function sum(a, b) {
+     if (typeof a !== 'number' || typeof b !== 'number') {
+       throw new Error("Both arguments must be numbers");
+     }
+     return a + b;
+   }
+   try {
+     console.log(sum(1, 2)); // Output: 3
+     console.log(sum(1, "2")); // Throws an error
+   } catch (error) {
+     console.error(error.message);
+   }
+
+118.
+
+
+
+
+
 
 
 
